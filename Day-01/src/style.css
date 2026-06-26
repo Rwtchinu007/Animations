@@ -1,0 +1,23 @@
+/* Boilerplate CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+}
+
+#root{
+    padding: 20px;
+}
+
+.box{
+    background-color: #9f5b5b;
+    width: 180px;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+}
