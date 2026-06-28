@@ -9,35 +9,33 @@ gsap.set(".box", {
 });
 
 gsap.to(".box", {
-  x: 1500, 
+  x: 1500,
   duration: 2,
   delay: 0.6,
   ease: " power2.inOut",
   repeat: -1, // repeat the animation infinitely
-// yoyo: true, // yoyo makes the animation play forwards and then backwards
+  // yoyo: true, // yoyo makes the animation play forwards and then backwards
 });
 
 // yoyo and repeat pe tricky questions puch skte h.
 
+// callback function
+gsap.to(".box", {
+  x: 1500,
+  duration: 2,
+  delay: 0.5,
+  ease: " power2.inOut",
 
-// callback function 
-gsap.to(".box",{
-    x: 1500,
-    duration: 2,
-    delay: 0.5,
-    ease: " power2.inOut",
-
-    // onStart:()=>{
-    //     console.log("Animation started");
-    //    // it will consider the delay time and then it will start the animation
-    // }
-    // onComplete:()=>{
-    //     console.log("Animation completed");
-    //     // it will be called when the animation is completed
-    // }
-    onUpdate:()=>{
-        console.log("Animation updated");
-      //  // it will be called on every frame of the animation, so it will be called multiple times during the animation
-    }
-})
-
+  // onStart:()=>{
+  //     console.log("Animation started");
+  //    // it will consider the delay time and then it will start the animation
+  // }
+  // onComplete:()=>{
+  //     console.log("Animation completed");
+  //     // it will be called when the animation is completed
+  // }
+  onUpdate: () => {
+    console.log("Animation updated");
+    //  // it will be called on every frame of the animation, so it will be called multiple times during the animation
+  },
+});
