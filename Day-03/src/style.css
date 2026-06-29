@@ -1,4 +1,8 @@
 /* Boilerplate CSS */
+@font-face{
+    font-family: "netflix";
+    src: url("./assets/netflix.woff2") format("woff2");
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +12,30 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #1a1a1a;
+  background-color: #000000;
+  color: #fff;
   overflow: hidden;
-  padding: 30px;
 }
-.box{
-    height: 100px;
-    width: 100px;
-    background-color: #fff;
-    margin: 10px;
+
+#root {
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading{
+    overflow: hidden;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 0.9;
+  word-spacing: -0.75rem;
+  font-family: "netflix";
+  font-weight: 800;
+}
+span {
+  display: inline-block;
 }
