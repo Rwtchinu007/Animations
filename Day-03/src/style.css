@@ -1,7 +1,7 @@
 /* Boilerplate CSS */
-@font-face{
-    font-family: "netflix";
-    src: url("./assets/netflix.woff2") format("woff2");
+@font-face {
+  font-family: "netflix";
+  src: url("./assets/netflix.woff2") format("woff2");
 }
 * {
   margin: 0;
@@ -16,30 +16,81 @@ body {
   color: #fff;
   overflow: hidden;
 }
-
-#root {
+.loader {
   height: 100%;
   width: 100%;
-  padding: 20px;
- 
+  background-color: #000000;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 200;
+}
+.loadercount h1 {
+   font-family: "netflix";
+  font-size: 5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-variant-numeric: tabular-nums; /* keeps digit width consistent, no jitter */
+  color: #ffffff; 
+  min-width: 6ch; 
+  text-align: center;
+}
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.background img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.overlayText {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.7rem;
+  /* padding-top: 18rem; */
+  color: rgb(0, 0, 0);
+
+}
+.heading h1 {
+  font-family: "netflix";
+  font-size: 3.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: 900;
+  font-style: italic;
+  color:transparent;
+    background :url(https://imgs.search.brave.com/4Jr4uGnjtxC4WN5k4tcmS1q8VP9rKVycCdxn60Lr7cA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YTEuZ2lwaHkuY29t/L21lZGlhL3YxLlky/bGtQVGM1TUdJM05q/RXhkbVZsZDJkMFoz/Tm9abVp1YURkdGFY/RnlhVzU2WkRZeGVI/WjNkWEkwYW1FNFpU/UXliVFF3YlNabGNE/MTJNVjluYVdaelgz/TmxZWEpqYUNaamRE/MW4vWGQ3UXFGUHY0/SVZBejhkbm9nL2dp/cGh5LmdpZg.gif);
+    background-clip: text;
+    
+    background-position: center bottom;
+    background-repeat: repeat;
+    -webkit-text-stroke: 0.3px rgb(0, 0, 0); /* outline width & color */
+  
+  
+}
+.subheading h2 {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.55rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  font-style: italic;
+  -webkit-text-stroke: 0.1px rgb(0, 0, 0); /* outline width & color */
 }
 
-.box1,
-.box2,
-.box3,.box4 {
-  height: 100px;
-    width: 100px;
-    margin-bottom: 20px;
+.heading,
+.subheading {
+  overflow: hidden;
 }
-.box1 {
-  background-color: #4e3fa0;
-}
-.box2 {
-  background-color: #ab25a0;
-}
-.box3 {
-  background-color: #b6454a;
-}
-.box4 {
-  background-color: #b4d23d;
-}
+
