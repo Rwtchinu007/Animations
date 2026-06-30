@@ -20,22 +20,26 @@ body {
 #root {
   height: 100%;
   width: 100%;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.heading{
-    overflow: hidden;
+  padding: 20px;
+ 
 }
 
-h1 {
-  font-size: 6rem;
-  line-height: 0.9;
-  word-spacing: -0.75rem;
-  font-family: "netflix";
-  font-weight: 800;
+.box1,
+.box2,
+.box3,.box4 {
+  height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
 }
-span {
-  display: inline-block;
+.box1 {
+  background-color: #4e3fa0;
+}
+.box2 {
+  background-color: #ab25a0;
+}
+.box3 {
+  background-color: #b6454a;
+}
+.box4 {
+  background-color: #b4d23d;
 }
