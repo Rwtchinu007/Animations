@@ -1,55 +1,16 @@
 import gsap from "gsap";
 import "./style.css";
 
-// timeline controls animations and allows us to play pause and reverse animations
+// Nested timelines are a great way to organize your animations. You can create multiple timelines and then combine them into a master timeline. This allows for better control and sequencing of animations.
 
-const play = document.querySelector(".play");
-const pause = document.querySelector(".pause");
-const restart = document.querySelector(".restart");
-const reverse = document.querySelector(".reverse");
-const seek = document.querySelector(".seek");
-const tl = gsap.timeline({
-  paused: true,
-});
-gsap.set([".box1", ".box2", ".box3", ".box4"], { x: 250 });
-tl.to(".box1", {
-  x: 1000,
-  duration: 1.3,
-  ease: "power1.inOut",
-  delay: 0.6,
-})
-  .to(".box2", {
-    x: 1000,
-    duration: 1.3,
-    ease: "power1.inOut",
-    delay: 0.6,
-  })
-  .addLabel("chinu")
-  .to(".box3", {
-    x: 1000,
-    duration: 1.3,
-    ease: "power1.inOut",
-    delay: 0.6,
-  })
-  .to(".box4", {
-    x: 1000,
-    duration: 1.3,
-    ease: "power1.inOut",
-    delay: 0.6,
-  });
+// // Loading Timeline
+// const loadingTimeline = () =>{
+//     return gsap.timeline().to("Element",{})
+// }
+// // Navbar Timeline
+// const navbarTimeline = () =>{
+//     return gsap.timeline().to("Element",{})
+// }
 
-play.addEventListener("click", () => {
-  tl.play();
-});
-pause.addEventListener("click", () => {
-  tl.pause();
-});
-restart.addEventListener("click", () => {
-  tl.restart();
-});
-reverse.addEventListener("click", () => {
-  tl.reverse();
-});
-seek.addEventListener("click", () => {
-  tl.seek("chinu");
-});
+// const master = gsap.timeline();
+// master.add(loadingTimeline()).add(navbarTimeline());
