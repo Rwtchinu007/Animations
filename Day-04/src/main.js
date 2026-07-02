@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 // 3. end - when the animation should end
 
 gsap.to(".box", {
-  x: 1250, 
+  x: 1250,
   ease: "power4.inOut",
   scrollTrigger: {
     trigger: ".page2",
@@ -18,12 +18,10 @@ gsap.to(".box", {
     // scrub value means the animation will be linked to the scroll position but with a delay of that value in seconds
     pin: true, // pin true means the element will be pinned in place while the animation is running
 
-    onEnter: ()=>{
-    },
-    onLeave: ()=>{},
-    onEnterBack: ()=>{},
-    onLeaveBack: ()=>{},
-    onUpdate: ()=>{},
-
-}
+    onEnter: () => {},
+    onLeave: () => {},
+    onEnterBack: () => {},
+    onLeaveBack: () => {},
+    onUpdate: () => {},
+  },
 });
