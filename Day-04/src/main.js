@@ -7,9 +7,15 @@ gsap.registerPlugin(ScrollTrigger);
 // 2. start - when the animation should start
 // 3. end - when the animation should end
 
-gsap.to(".box", {
-  x: 1250,
-  ease: "power4.inOut",
+gsap.set(".imageDiv", {
+  scale: 0.3,
+  filter: "blur(5px)",
+});
+gsap.set(".content", {
+  gap: "100rem",
+});
+
+const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".page2",
     start: "top top",
@@ -18,10 +24,25 @@ gsap.to(".box", {
     // scrub value means the animation will be linked to the scroll position but with a delay of that value in seconds
     pin: true, // pin true means the element will be pinned in place while the animation is running
 
-    onEnter: () => {},
-    onLeave: () => {},
-    onEnterBack: () => {},
-    onLeaveBack: () => {},
-    onUpdate: () => {},
+    // onEnter: () => {},
+    // onLeave: () => {},
+    // onEnterBack: () => {},
+    // onLeaveBack: () => {},
+    // onUpdate: () => {},
   },
 });
+
+tl
+  .to(".imageDiv", {
+    scale: 1,
+    filter: "blur(0px)",
+    ease: "elastic.Out",
+  })
+  .to(
+    ".content",
+    {
+      gap: "5rem",
+      ease: "expo.Out",
+    },
+    "<",
+  );
