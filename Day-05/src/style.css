@@ -1,27 +1,113 @@
-/* Boilerplate CSS */
+/* =========================================
+   Boilerplate & Base Setup
+   ========================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: #0b0b0f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden; /* Prevents the whole page from scrolling */
 }
 
-#root{
+/* =========================================
+   Main Layout Container
+   ========================================= */
+#root {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  background: radial-gradient(circle at center, #1f1f2e 0%, #000000 100%);
 }
 
-.box{
-  height: 150px;
-  width: 150px;
-  background-color: rgb(171, 66, 66);
-  border-radius: 20px;
+/* =========================================
+   Image Gallery (Sidebar)
+   ========================================= */
+.imageGallery {
+  height: 85%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  
+  /* Scrolling properties */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for a cleaner look */
+.imageGallery::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.imageGallery {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Style for ANY image currently inside the gallery */
+.imageGallery img {
+  flex-shrink: 0; /* Prevents images from squishing */
+  height: 160px;  /* Fixed thumbnail height */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform; /* Optimizes GSAP animation performance */
+}
+
+/* Hover effect for gallery thumbnails */
+.imageGallery img:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================
+   Main Image Display (Center/Right)
+   ========================================= */
+.imageShow {
+  height: 85%;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Style for ANY image currently inside the show area */
+.imageShow img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem; 
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  will-change: transform; /* Optimizes GSAP animation performance */
 }
