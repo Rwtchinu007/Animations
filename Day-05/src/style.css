@@ -1,0 +1,54 @@
+/* Boilerplate CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+#root{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+
+span{
+  display: inline-block;
+}
+
+.title{
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.title h1{
+  font-size: 4.4rem;
+  color: white;
+  font-family: system-ui;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 0.85;
+}
+p{
+  font-size: 1.2rem;
+  color: white;
+  font-family: system-ui;
+  text-transform: uppercase;
+  font-weight: 400;
+  
+}
+.title-word,.title-char{
+  overflow: hidden;
+} 
